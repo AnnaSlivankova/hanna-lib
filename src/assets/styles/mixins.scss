@@ -1,0 +1,19 @@
+@import 'variables';
+
+@mixin text($fontWeight, $fontSize, $lineHeight: normal, $color: $gray1000) {
+  @if $lineHeight == normal {
+    line-height: normal;
+  } @else {
+    line-height: $lineHeight;
+  }
+
+  @if ($color == #0d0c0b) {
+    color: #0d0c0b;
+  } @else {
+    color: $color;
+  }
+
+  font-weight: $fontWeight;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}

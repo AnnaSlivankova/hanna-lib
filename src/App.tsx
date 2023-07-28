@@ -1,3 +1,15 @@
+import { Pages } from './pages'
+
 export function App() {
-  return <div>Hello</div>
+  return (
+    <>
+      <Pages />
+      {/*<Header />*/}
+      {/*<Carusel />*/}
+      {/*<div style={{ display: 'flex', justifyContent: 'center' }}>*/}
+      {/*  <CardRules />*/}
+      {/*</div>*/}
+      {/*<Footer />*/}
+    </>
+  )
 }

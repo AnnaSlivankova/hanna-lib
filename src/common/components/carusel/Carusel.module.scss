@@ -1,0 +1,116 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.container {
+  //margin-top: 100px;
+
+  .img {
+    max-width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+  }
+
+  @media screen and (width <= 1027px) {
+    margin-top: 60px;
+  }
+}
+
+.arrows {
+  cursor: pointer;
+
+  position: absolute;
+  z-index: 2;
+  top: calc(50% - 15px);
+
+  width: 50px;
+  height: 50px;
+
+  fill: $primary;
+
+  &:active {
+    fill: $tertiary;
+  }
+
+  @media screen and (width <= 632px) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@mixin legend {
+  position: absolute;
+  bottom: 40px;
+
+  width: 80%;
+  margin-left: -40%;
+  padding: 10px;
+
+  text-align: center;
+}
+
+.textOne {
+  @include legend;
+
+  top: 42%;
+  left: 30%;
+
+  height: 90px;
+  margin-left: -30%;
+
+  fill: $secondary;
+
+  @media screen and (width <= 632px) {
+    top: 36%;
+    left: 35%;
+    height: 50px;
+  }
+}
+
+.textTwo {
+  @include legend;
+
+  top: 44%;
+  left: 42%;
+
+  font-size: 46px;
+  font-weight: 100;
+  color: $secondary;
+  text-transform: uppercase;
+
+  .textTwo2 {
+    font-weight: 700;
+  }
+
+  @media screen and (width <= 632px) {
+    top: 39%;
+    left: 50%;
+    font-size: 20px;
+  }
+}
+
+.textThree {
+  @include legend;
+
+  top: 40%;
+  left: 50%;
+
+  font-size: 40px;
+  font-weight: 300;
+  color: $secondary;
+
+  .textThree2 {
+    font-size: 24px;
+    font-weight: 100;
+    text-transform: uppercase;
+
+    @media screen and (width <= 632px) {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+  }
+
+  @media screen and (width <= 632px) {
+    top: 35%;
+    font-size: 16px;
+  }
+}

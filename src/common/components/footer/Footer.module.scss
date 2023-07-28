@@ -1,0 +1,115 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+@mixin commonWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding: 30px;
+
+  font-size: 12px;
+  color: $primary100;
+  text-transform: uppercase;
+
+  background-color: $primary;
+
+  .left {
+    @include commonWrapper;
+
+    justify-content: space-between;
+
+    //justify-content: center;
+
+    > p {
+      font-size: 10px;
+      text-transform: none;
+    }
+
+    .logo {
+      width: 250px;
+      height: 50px;
+      fill: $primary100;
+    }
+  }
+
+  .middle {
+    @include commonWrapper;
+
+    > span {
+      font-weight: 600;
+      color: $tertiary;
+    }
+
+    > nav {
+      > ul {
+        //display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        > li {
+          padding-top: 10px;
+
+          > a {
+            @include text(300, 12px, 0, $primary100);
+
+            padding: 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            &:hover {
+              color: $tertiary;
+            }
+
+            &:active {
+              color: $primary100;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .right {
+    @include commonWrapper;
+
+    &:first-child {
+      font-weight: 600;
+      color: $tertiary;
+    }
+
+    > p {
+      margin: 0;
+      padding: 10px 0 0;
+    }
+
+    .btnContainer {
+      .icon {
+        width: 25px;
+        height: 25px;
+        margin: 10px;
+        fill: $primary100;
+
+        &:hover {
+          fill: $tertiary;
+        }
+
+        &:active {
+          fill: $primary100;
+        }
+      }
+    }
+  }
+
+  @media screen and (width <= 632px) {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+}

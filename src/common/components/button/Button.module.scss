@@ -1,0 +1,125 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+@mixin button {
+  all: unset;
+
+  cursor: pointer;
+  user-select: none;
+
+  display: inline-flex;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  //margin: 10px;
+  padding: 0.375rem 1.75rem;
+
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border: none;
+  border-radius: 0.25rem;
+
+  transition: var(--transition-duration-basic) background-color,
+    var(--transition-duration-basic) color;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-outline-focus);
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  &.fullWidth {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.primary {
+  @include button;
+
+  //color: var(--color-text-primary);
+  color: $primary100;
+  background-color: $primary;
+  border: 1px solid $primary;
+
+  //background-color: var(--color-primary);
+  //box-shadow: 0 4px 18px rgb(140 97 255 / 35%);
+  box-shadow: 0 4px 18px rgb(56 90 100 / 35%);
+
+  &:hover:enabled {
+    //background-color: var(--color-primary-hover);
+    background-color: $primary400;
+    border-color: $primary400;
+  }
+
+  &:active:enabled {
+    //background-color: var(--color-primary-active);
+    background-color: $primary200;
+  }
+}
+
+.secondary {
+  @include button;
+
+  color: $secondary100;
+  background-color: $secondary;
+  border: 1px solid $secondary;
+  box-shadow: 0 4px 4px 0 rgb(77 86 96 / 13%);
+
+  &:hover:enabled {
+    background-color: $secondary400;
+    border-color: $secondary400;
+  }
+
+  &:active:enabled {
+    background-color: $secondary200;
+  }
+}
+
+.tertiary {
+  @include button;
+
+  color: $tertiary100;
+  background-color: $tertiary;
+  border: 1px solid $tertiary;
+
+  &:hover:enabled {
+    background-color: $tertiary400;
+    border-color: $tertiary400;
+  }
+
+  &:active:enabled {
+    background-color: $tertiary200;
+  }
+}
+
+.link {
+  @include button;
+
+  padding: 0.375rem 0;
+
+  //font-weight: var(--font-weight-bold);
+  //line-height: var(--line-height-m);
+  font-weight: 600;
+  line-height: 16px;
+
+  //color: var(--color-accent-700, #704ecc);
+  color: $primary;
+  text-decoration-line: underline;
+
+  &:hover:enabled {
+    color: $primary200;
+  }
+}
