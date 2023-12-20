@@ -1,0 +1,64 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+//@mixin commonBtn {
+//  font-size: 16px;
+//  font-weight: 300;
+//
+//  @media screen and (width <= 1027px) {
+//    padding: 0.375rem 10px;
+//    font-size: 12px;
+//  }
+//}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+
+  .reset {
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+
+    margin: 8px 0;
+
+    background-color: transparent;
+    border: none;
+
+    span {
+      @include text(100, 16px, normal, $primary);
+
+      display: none;
+      text-transform: uppercase;
+
+      @media screen and (width <= 767px) {
+        display: block;
+      }
+    }
+
+    svg {
+      width: 43px;
+      height: 43px;
+      fill: $primary;
+
+      &:hover {
+        fill: $tertiary;
+      }
+    }
+  }
+
+  @media screen and (width <= 767px) {
+    flex-direction: column;
+    gap: 0;
+
+    input,
+    button {
+      margin-top: 10px;
+    }
+  }
+}

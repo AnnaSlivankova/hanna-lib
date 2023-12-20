@@ -4,18 +4,15 @@
 .container {
   display: flex;
   flex-wrap: wrap;
-
-  //justify-content: space-between;
+  gap: 1px;
   justify-content: center;
 
-  //margin-top: 100px;
   margin-right: 30px;
   margin-left: 30px;
 
-  //min-height: 100vh;
+  //border: 1px solid rebeccapurple;
 
   .card {
-    //width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,6 +28,8 @@
 
     > img {
       width: 100%;
+      border: none;
+      border-radius: 10px;
     }
 
     > p {
@@ -41,7 +40,12 @@
       text-transform: uppercase;
     }
 
-    //@media (width >= 360px) and (width <= 768px) {
+    @media screen and (width <= 1027px) {
+      > p {
+        font-size: 14px;
+      }
+    }
+
     @media screen and (width <= 632px) {
       width: 90vw;
       min-height: 0;
@@ -53,13 +57,14 @@
       }
 
       > p {
-        @include text(300, 14px, 24px, $secondary);
+        //@include text(300, 14px, 24px, $secondary);
+        @include text(300, 12px, 24px, $secondary);
       }
     }
   }
 
   @media screen and (min-width: $desktop) {
-    width: 1300px;
+    //width: 1300px;
   }
 
   //@media (width >= 360px) and (width <= 768px) {

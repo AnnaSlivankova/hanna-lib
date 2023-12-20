@@ -1,0 +1,93 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.bookContainer {
+  display: flex;
+  max-width: 1280px;
+
+  //border: 1px solid red;
+
+  img {
+    width: 426px;
+    height: 447px;
+
+    //padding: 0 20px;
+    padding: 10px;
+    object-fit: cover;
+
+    //border: none;
+    //border-radius: 10px 10px 0 0;
+  }
+
+  .aditionals {
+    @include text(100, 16px, normal, $gray900);
+
+    display: flex;
+    flex-direction: column;
+
+    //width: 523px;
+    width: 413px;
+
+    //height: 447px;
+    //padding: 0 20px;
+    padding: 10px;
+
+    //border: 1px solid red;
+    //background-color: rgb(255 255 255 / 50%);
+    //backdrop-filter: blur(10px);
+    //border: none;
+    //border-radius: 10px;
+    //box-shadow: 0 5px 20px rgb(29 33 38 / 3%), 0 1px 2px rgb(29 33 38 / 10%);
+
+    .title {
+      font-size: 20px;
+      font-weight: 600;
+      color: $secondary;
+      text-transform: uppercase;
+    }
+
+    .author {
+      font-weight: 300;
+      color: $secondary;
+      text-transform: uppercase;
+    }
+
+    .description {
+      //font-weight: 100;
+
+      ::first-letter {
+        text-transform: capitalize;
+      }
+    }
+
+    .addInfo {
+      margin-top: 10px;
+      font-weight: 300;
+    }
+
+    .primBtn {
+      width: 150px;
+      margin: 20px 0;
+    }
+  }
+
+  @media screen and (width <= 899px) {
+    flex-direction: column;
+  }
+
+  @media screen and (width <= 479px) {
+    img {
+      width: 326px;
+      height: 347px;
+    }
+
+    .aditionals {
+      width: 313px;
+      font-size: 14px;
+
+      .title {
+        font-size: 16px;
+      }
+    }
+  }
+}

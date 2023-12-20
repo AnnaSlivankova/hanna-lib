@@ -1,0 +1,48 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+input,
+select {
+  display: inline-block;
+
+  box-sizing: border-box;
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px 20px;
+
+  border: 1px solid $primary;
+  border-radius: 4px;
+  box-shadow: 0 0 15px 4px rgb(0 0 0 / 6%);
+}
+
+.input_area {
+  appearance: none;
+  outline: none;
+}
+
+.eye_icon {
+  cursor: pointer;
+
+  position: relative;
+  top: -4em;
+  right: 20px;
+
+  float: right;
+  display: block;
+
+  width: 20px;
+  height: 20px;
+
+  fill: $primary;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  background-image: url('../../../assets/icons/calendar.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+}
+
+.wrapper {
+}

@@ -1,0 +1,100 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.sidebar {
+  position: fixed;
+  z-index: 9999999;
+  right: 0;
+
+  display: none;
+
+  width: 317px;
+
+  //min-height: 100vh;
+
+  height: 100%;
+
+  background: #fff;
+  box-shadow: 0 10px 40px rgb(29 33 38 / 13%), 0 1px 2px rgb(29 33 38 / 10%);
+}
+
+.sidebar.open {
+  display: block;
+  background: #fff;
+  box-shadow: 0 10px 40px rgb(29 33 38 / 13%), 0 1px 2px rgb(29 33 38 / 10%);
+}
+
+.background {
+  position: fixed;
+  z-index: 9999999;
+  inset: 0;
+
+  opacity: 0.5;
+  background-color: black;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0 0 40px;
+
+  a {
+    @include text(100, 20px, 27px, $secondary);
+
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+
+    margin: 10px;
+
+    font-style: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $tertiary;
+    }
+  }
+
+  a.active {
+    color: $tertiary;
+
+    //text-decoration: underline;
+  }
+
+  a.active .icon {
+    stroke: $tertiary;
+  }
+
+  a:hover .icon {
+    stroke: $tertiary;
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+    fill: transparent;
+    stroke: $primary;
+  }
+}
+
+.close {
+  cursor: pointer;
+
+  position: absolute;
+  top: 8px;
+  right: 30px;
+
+  background-color: transparent;
+  border: none;
+
+  svg {
+    width: 40px;
+    height: 40px;
+    fill: $primary;
+
+    &:hover {
+      fill: $tertiary;
+    }
+  }
+}

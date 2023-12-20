@@ -1,5 +1,7 @@
 import s from './Footer.module.scss'
 import sprite from '../../../assets/sprite.svg'
+import { NavLink } from 'react-router-dom'
+import { PATH } from '../../constants'
 
 export const Footer = () => {
   return (
@@ -15,23 +17,27 @@ export const Footer = () => {
         <nav>
           <ul>
             <li>
-              <a href="#">Главная</a>
+              <NavLink to={PATH.MAIN}>Главная</NavLink>
+              {/*<a href="#">Главная</a>*/}
             </li>
             <li>
-              <a href="#">Каталог</a>
+              <NavLink to={PATH.CATALOG}>Каталог</NavLink>
             </li>
             <li>
-              <a href="#">book club</a>
+              <NavLink to={PATH.BOOK_CLUB}>book club</NavLink>
             </li>
             <li>
-              <a href="#">podcast</a>
+              <NavLink to={PATH.PODCAST}>podcast</NavLink>
             </li>
             <li>
-              <a href="#">О нас</a>
+              <NavLink to={PATH.ABOUT_US}>О нас</NavLink>
             </li>
             <li>
-              <a href="#">Контакты</a>
+              <NavLink to={PATH.CONTACTS}>Контакты</NavLink>
             </li>
+            {/*<li>*/}
+            {/*  <NavLink to={PATH.LOGIN}>Войти</NavLink>*/}
+            {/*</li>*/}
           </ul>
         </nav>
       </div>
@@ -40,12 +46,24 @@ export const Footer = () => {
         <p>annslivankova@gmail.com</p>
         <p>Минск, Беларусь</p>
         <div className={s.btnContainer}>
-          <a href="https://www.facebook.com/">
+          <a
+            href="https://www.telegram.com/"
+            title="Перейти в telegram чат"
+            target="_blank"
+            rel="nofollow"
+            aria-label="Ссылка на telegram"
+          >
             <svg className={s.icon}>
               <use xlinkHref={`${sprite}#telegram`} />
             </svg>
           </a>
-          <a href="https://twitter.com/">
+          <a
+            href="https://instagram.com/"
+            title="Перейти на instagram страницу"
+            target="_blank"
+            rel="nofollow"
+            aria-label="Ссылка на instagram"
+          >
             <svg className={s.icon}>
               <use xlinkHref={`${sprite}#instagram`} />
             </svg>

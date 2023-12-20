@@ -22,19 +22,11 @@
   align-items: center;
   justify-content: space-between;
 
-  //width: 100%;
-
-  //width: 100vw;
   height: 80px;
   padding-right: 30px;
   padding-left: 30px;
 
-  //color: $gray100;
-  //color: $primary100;
-
   background-color: $primary;
-
-  //padding: 20px;
 
   .logo {
     width: 250px;
@@ -50,18 +42,41 @@
     }
   }
 
-  > nav {
-    > ul {
+  .menuBtn {
+    display: none;
+
+    width: 40px;
+    height: 40px;
+
+    fill: $primary;
+    stroke: $tertiary;
+
+    &:hover {
+      cursor: pointer;
+      stroke: $tertiary100;
+    }
+
+    &:active {
+      fill: $tertiary100;
+    }
+
+    @media screen and (width <= 767px) {
+      display: block;
+    }
+  }
+
+  nav {
+    ul {
       display: flex;
       margin: 0;
       padding: 0;
       list-style: none;
 
-      > li {
+      li {
         //margin-left: 20px;
         //padding: 10px;
 
-        > a {
+        a {
           //@include text(100, 16px, 24px, $primary100);
 
           @include text(300, 16px, 0, $primary100);
@@ -162,6 +177,10 @@
     @media screen and (width <= 1027px) {
       gap: 6px;
     }
+
+    @media screen and (width <= 767px) {
+      display: none;
+    }
   }
 
   @media screen and (width <= 1027px) {
@@ -170,26 +189,199 @@
   }
 }
 
-.burgerButton {
-  display: none;
-
-  width: 30px;
-  height: 30px;
-
-  border: 1px solid transparent;
-
-  stroke: $primary100;
-
-  &:hover {
-    border-color: $tertiary;
-    stroke: $tertiary;
-  }
-
-  &:active {
-    stroke: $primary100;
-  }
-
-  @media screen and (width <= 767px) {
-    display: block;
-  }
-}
+//@import 'src/assets/styles/variables';
+//@import 'src/assets/styles/mixins';
+//
+//@mixin commonBtn {
+//  font-size: 16px;
+//  font-weight: 300;
+//
+//  @media screen and (width <= 1027px) {
+//    padding: 0.375rem 10px;
+//    font-size: 12px;
+//  }
+//}
+//
+//.container {
+//  position: fixed;
+//  z-index: 9999;
+//  top: 0;
+//  right: 0;
+//  left: 0;
+//
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//
+//  height: 80px;
+//  padding-right: 30px;
+//  padding-left: 30px;
+//
+//  background-color: $primary;
+//
+//  .wrapper {
+//    display: flex;
+//    align-items: center;
+//    justify-content: space-between;
+//    max-width: 1280px;
+//    .logo {
+//      width: 250px;
+//      height: 50px;
+//
+//      //fill: $tertiary;
+//      //fill: $primary100;
+//      fill: $tertiary;
+//
+//      @media screen and (width <= 1027px) {
+//        width: 150px;
+//        height: 35px;
+//      }
+//    }
+//
+//    .menuBtn {
+//      display: none;
+//
+//      width: 40px;
+//      height: 40px;
+//
+//      fill: $primary;
+//      stroke: $tertiary;
+//
+//      &:hover {
+//        cursor: pointer;
+//        stroke: $tertiary100;
+//      }
+//
+//      &:active {
+//        fill: $tertiary100;
+//      }
+//
+//      @media screen and (width <= 767px) {
+//        display: block;
+//      }
+//    }
+//
+//    nav {
+//      ul {
+//        display: flex;
+//        margin: 0;
+//        padding: 0;
+//        list-style: none;
+//
+//        li {
+//          //margin-left: 20px;
+//          //padding: 10px;
+//
+//          a {
+//            //@include text(100, 16px, 24px, $primary100);
+//
+//            @include text(300, 16px, 0, $primary100);
+//
+//            padding: 10px;
+//            text-decoration: none;
+//            text-transform: uppercase;
+//            border: 1px solid transparent;
+//
+//            &:hover {
+//              //font-weight: 600;
+//              //text-decoration: underline;
+//              color: $tertiary;
+//
+//              //border: 1px solid $tertiary;
+//              border-color: $tertiary;
+//            }
+//
+//            &:active {
+//              color: $primary100;
+//            }
+//
+//            @media screen and (width <= 1027px) {
+//              padding: 6px;
+//              font-size: 12px;
+//            }
+//          }
+//        }
+//      }
+//
+//      @media screen and (width <= 767px) {
+//        display: none;
+//      }
+//    }
+//
+//    .btnRightContainer {
+//      display: flex;
+//      flex-direction: row;
+//      gap: 10px;
+//      align-items: center;
+//      justify-content: center;
+//
+//      .outlinedBtn {
+//        @include commonBtn;
+//
+//        color: $tertiary;
+//        background-color: transparent;
+//
+//        &:hover:enabled {
+//          color: $tertiary100;
+//          background-color: transparent;
+//          border-color: $tertiary;
+//        }
+//
+//        &:active:enabled {
+//          background-color: $tertiary;
+//        }
+//      }
+//
+//      .linkBtn {
+//        @include commonBtn;
+//
+//        color: $tertiary;
+//        background-color: transparent;
+//        border: none;
+//
+//        &:hover:enabled {
+//          color: $tertiary100;
+//          background-color: transparent;
+//        }
+//
+//        &:active:enabled {
+//          color: $tertiary;
+//          background-color: transparent;
+//        }
+//      }
+//
+//      .userBtn {
+//        cursor: pointer;
+//        width: 50px;
+//        height: 50px;
+//        fill: $tertiary;
+//
+//        &:hover {
+//          fill: $tertiary100;
+//        }
+//
+//        &:active {
+//          fill: $tertiary;
+//        }
+//
+//        @media screen and (width <= 1027px) {
+//          width: 35px;
+//          height: 35px;
+//        }
+//      }
+//
+//      @media screen and (width <= 1027px) {
+//        gap: 6px;
+//      }
+//
+//      @media screen and (width <= 767px) {
+//        display: none;
+//      }
+//    }
+//  }
+//
+//  @media screen and (width <= 1027px) {
+//    //@media screen and (width <= 512px) {
+//    height: 55px;
+//  }
+//}

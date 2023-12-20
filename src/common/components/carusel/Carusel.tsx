@@ -47,7 +47,8 @@ export const Carusel = () => {
   return (
     <Carousel
       className={s.container}
-      autoPlay={false}
+      autoPlay={true}
+      showStatus={false}
       interval={6000}
       infiniteLoop
       showThumbs={false}
@@ -70,7 +71,7 @@ export const Carusel = () => {
     >
       {pics.map(el => (
         <div key={el.id}>
-          <img src={el.pic} alt={`carusel pic-${el.id}`} className={s.img} />
+          <img src={el.pic} alt={`carousel pic-${el.id}`} className={s.img} />
           {el.children}
         </div>
       ))}

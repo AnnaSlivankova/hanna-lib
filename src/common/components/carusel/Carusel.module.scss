@@ -2,17 +2,23 @@
 @import 'src/assets/styles/mixins';
 
 .container {
-  //margin-top: 100px;
+  z-index: 100;
+
+  //width: 100vw;
+
+  //height: 30vh;
 
   .img {
-    max-width: 100%;
-    max-height: 450px;
+    //width: 750px;
+    height: 30vh;
+
+    //max-width: 100%;
+    //max-height: 450px;
     object-fit: cover;
   }
 
-  @media screen and (width <= 1027px) {
-    margin-top: 60px;
-  }
+  //@media screen and (width <= 1027px) {
+  //}
 }
 
 .arrows {
@@ -39,18 +45,22 @@
 
 @mixin legend {
   position: absolute;
-  bottom: 40px;
+
+  //bottom: 40px;
 
   width: 80%;
   margin-left: -40%;
   padding: 10px;
 
   text-align: center;
+
+  //border: 1px solid crimson;
 }
 
 .textOne {
   @include legend;
 
+  //top: 42%;
   top: 42%;
   left: 30%;
 
@@ -60,16 +70,19 @@
   fill: $secondary;
 
   @media screen and (width <= 632px) {
-    top: 36%;
+    //top: 36%;
     left: 35%;
-    height: 50px;
+
+    //height: 50px;
+    height: 60px;
   }
 }
 
 .textTwo {
   @include legend;
 
-  top: 44%;
+  //top: 44%;
+  top: 43%;
   left: 42%;
 
   font-size: 46px;
@@ -81,9 +94,16 @@
     font-weight: 700;
   }
 
-  @media screen and (width <= 632px) {
-    top: 39%;
+  @media screen and (width <= 950px) {
+    top: 43%;
     left: 50%;
+  }
+
+  @media screen and (width <= 632px) {
+    //top: 39%;
+    top: 43%;
+
+    //left: 50%;
     font-size: 20px;
   }
 }
@@ -103,10 +123,23 @@
     font-weight: 100;
     text-transform: uppercase;
 
+    @media screen and (width <= 708px) {
+      font-size: 20px;
+    }
+
     @media screen and (width <= 632px) {
       margin-top: 20px;
       font-size: 14px;
     }
+  }
+
+  @media screen and (width <= 1272px) {
+    top: 15%;
+  }
+
+  @media screen and (width <= 708px) {
+    top: 30%;
+    font-size: 30px;
   }
 
   @media screen and (width <= 632px) {

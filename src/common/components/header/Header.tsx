@@ -2,61 +2,158 @@ import s from './Header.module.scss'
 import sprite from '../../../assets/sprite.svg'
 import { Button } from '../button/Button.tsx'
 import { LoadingLine } from '../loading-line/LoadingLine.tsx'
+import { PATH, TITLES } from '../../constants'
+import { NavLink } from 'react-router-dom'
+import * as React from 'react'
 
-export const Header = () => {
+export const Header: React.FC<PropsType> = ({ handleOpen }) => {
   const isLoading = false
   const isLogin = false
 
   return (
     <header className={s.container}>
-      <svg className={s.logo}>
-        <use xlinkHref={`${sprite}#logo`} />
-      </svg>
+      <NavLink to={PATH.MAIN}>
+        <svg className={s.logo}>
+          <use xlinkHref={`${sprite}#logo`} />
+        </svg>
+      </NavLink>
 
-      <svg className={s.burgerButton}>
-        <use xlinkHref={`${sprite}#burger`} />
+      <svg className={s.menuBtn} onClick={handleOpen}>
+        <use xlinkHref={`${sprite}#menu`} />
       </svg>
 
       <nav>
         <ul>
           <li>
-            <a href="#">Каталог</a>
+            <NavLink to={PATH.CATALOG}>Каталог</NavLink>
           </li>
           <li>
-            <a href="#">book club</a>
+            <NavLink to={PATH.BOOK_CLUB}>book club</NavLink>
           </li>
           <li>
-            <a href="#">podcast</a>
+            <NavLink to={PATH.PODCAST}>podcast</NavLink>
           </li>
           <li>
-            <a href="#">О нас</a>
+            <NavLink to={PATH.ABOUT_US}>О нас</NavLink>
           </li>
           <li>
-            <a href="#">Контакты</a>
+            <NavLink to={PATH.CONTACTS}>Контакты</NavLink>
           </li>
         </ul>
       </nav>
 
       {isLogin ? (
         <div className={s.btnRightContainer}>
-          <svg className={s.userBtn}>
-            <use xlinkHref={`${sprite}#user-button`} />
-          </svg>
+          <NavLink to={PATH.USER}>
+            <svg className={s.userBtn}>
+              <use xlinkHref={`${sprite}#user-button`} />
+            </svg>
+          </NavLink>
+
           <Button className={s.outlinedBtn} variant="tertiary">
-            выйти
+            {TITLES.LOGOUT}
           </Button>
         </div>
       ) : (
         <div className={s.btnRightContainer}>
-          <Button className={s.linkBtn} variant="tertiary">
-            регистрация
-          </Button>
-          <Button className={s.outlinedBtn} variant="tertiary">
-            войти
-          </Button>
+          <NavLink to={PATH.REGISTRATION}>
+            <Button className={s.linkBtn} variant="tertiary">
+              {TITLES.REGISTRATION}
+            </Button>
+          </NavLink>
+          <NavLink to={PATH.LOGIN}>
+            <Button className={s.outlinedBtn} variant="tertiary">
+              {TITLES.LOGIN}
+            </Button>
+          </NavLink>
         </div>
       )}
       {isLoading && <LoadingLine />}
     </header>
   )
 }
+
+type PropsType = {
+  handleOpen: () => void
+}
+
+// import s from './Header.module.scss'
+// import sprite from '../../../assets/sprite.svg'
+// import { Button } from '../button/Button.tsx'
+// import { LoadingLine } from '../loading-line/LoadingLine.tsx'
+// import { PATH, TITLES } from '../../constants'
+// import { NavLink } from 'react-router-dom'
+// import * as React from 'react'
+//
+// export const Header: React.FC<PropsType> = ({ handleOpen }) => {
+//   const isLoading = false
+//   const isLogin = false
+//
+//   return (
+//     <header className={s.container}>
+//       <div className={s.wrapper}>
+//         <NavLink to={PATH.MAIN}>
+//           <svg className={s.logo}>
+//             <use xlinkHref={`${sprite}#logo`} />
+//           </svg>
+//         </NavLink>
+//
+//         <svg className={s.menuBtn} onClick={handleOpen}>
+//           <use xlinkHref={`${sprite}#menu`} />
+//         </svg>
+//
+//         <nav>
+//           <ul>
+//             <li>
+//               <NavLink to={PATH.CATALOG}>Каталог</NavLink>
+//             </li>
+//             <li>
+//               <NavLink to={PATH.BOOK_CLUB}>book club</NavLink>
+//             </li>
+//             <li>
+//               <NavLink to={PATH.PODCAST}>podcast</NavLink>
+//             </li>
+//             <li>
+//               <NavLink to={PATH.ABOUT_US}>О нас</NavLink>
+//             </li>
+//             <li>
+//               <NavLink to={PATH.CONTACTS}>Контакты</NavLink>
+//             </li>
+//           </ul>
+//         </nav>
+//
+//         {isLogin ? (
+//           <div className={s.btnRightContainer}>
+//             <NavLink to={PATH.USER}>
+//               <svg className={s.userBtn}>
+//                 <use xlinkHref={`${sprite}#user-button`} />
+//               </svg>
+//             </NavLink>
+//
+//             <Button className={s.outlinedBtn} variant="tertiary">
+//               {TITLES.LOGOUT}
+//             </Button>
+//           </div>
+//         ) : (
+//           <div className={s.btnRightContainer}>
+//             <NavLink to={PATH.REGISTRATION}>
+//               <Button className={s.linkBtn} variant="tertiary">
+//                 {TITLES.REGISTRATION}
+//               </Button>
+//             </NavLink>
+//             <NavLink to={PATH.LOGIN}>
+//               <Button className={s.outlinedBtn} variant="tertiary">
+//                 {TITLES.LOGIN}
+//               </Button>
+//             </NavLink>
+//           </div>
+//         )}
+//       </div>
+//       {isLoading && <LoadingLine />}
+//     </header>
+//   )
+// }
+//
+// type PropsType = {
+//   handleOpen: () => void
+// }
