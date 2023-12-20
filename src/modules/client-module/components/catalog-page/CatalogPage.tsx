@@ -5,8 +5,8 @@ import { CardBook } from '../../../../common/components/card-book/CardBook.tsx'
 import { authors, categories } from '../../../../common/data-for-tests.ts'
 import s from './CatalogPage.module.scss'
 import sprite from '../../../../assets/sprite.svg'
-import { Select } from '../../../../common/components/select-radix/select-radix.tsx'
-import { TextField } from '../../../../common/components/text-field/text-field.tsx'
+import { Select } from '../../../../common/components/select-radix/SelectRadix.tsx'
+import { TextField } from '../../../../common/components/text-field/TextField.tsx'
 
 export const CatalogPage = () => {
   const categoriesOptions = categories.map(el => ({ label: el.category, value: el.value }))

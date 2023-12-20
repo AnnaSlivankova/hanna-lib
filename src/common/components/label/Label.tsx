@@ -3,7 +3,7 @@ import { ComponentPropsWithoutRef, FC, ReactNode } from 'react'
 import * as LabelRadixUI from '@radix-ui/react-label'
 import { clsx } from 'clsx'
 
-import s from './label.module.scss'
+import s from './Label.module.scss'
 
 export type LabelProps = {
   label?: ReactNode

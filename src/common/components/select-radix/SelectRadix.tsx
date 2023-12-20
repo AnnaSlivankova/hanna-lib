@@ -1,11 +1,11 @@
-import s from './select-radix.module.scss'
+import s from './SelectRadix.module.scss'
 import { ChevronDownIcon } from 'lucide-react'
 import { CSSProperties, FC, Fragment, useMemo } from 'react'
 import clsx from 'clsx'
 import { Listbox } from '@headlessui/react'
 import { Float } from '@headlessui-float/react'
-import { Scrollbar } from '../scrollbar/scrollbar.tsx'
-import { Label } from '../label/label.tsx'
+import { Scrollbar } from '../scrollbar/Scrollbar.tsx'
+import { Label } from '../label/Label.tsx'
 
 type Option =
   | { disabled?: boolean; label: number; value: number }

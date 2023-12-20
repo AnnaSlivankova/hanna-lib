@@ -3,7 +3,7 @@ import { ComponentPropsWithoutRef, FC, ReactNode } from 'react'
 import * as ScrollArea from '@radix-ui/react-scroll-area'
 import { clsx } from 'clsx'
 
-import s from './scrollbar.module.scss'
+import s from './Scrollbar.module.scss'
 
 export type ScrollbarProps = {
   children: ReactNode

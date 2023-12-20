@@ -4,7 +4,7 @@ import { ChangeEvent, ComponentProps, ComponentPropsWithoutRef, forwardRef, useS
 import { EyeOff, Eye, Search } from 'lucide-react'
 import { clsx } from 'clsx'
 
-import s from './text-field.module.scss'
+import s from './TextField.module.scss'
 
 export type TextFieldProps = {
   containerProps?: ComponentProps<'div'>

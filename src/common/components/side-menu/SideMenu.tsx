@@ -1,6 +1,6 @@
 import * as Dialog from '@radix-ui/react-dialog'
 import { X, Menu } from 'lucide-react'
-import s from './side-menu.module.scss'
+import s from './SideMenu.module.scss'
 
 const DialogDemo = () => (
   <Dialog.Root>
