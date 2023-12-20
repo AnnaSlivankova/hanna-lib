@@ -1,10 +1,13 @@
+import { useEffect } from 'react'
+
+import { SubmitHandler, useForm } from 'react-hook-form'
+import { NavLink } from 'react-router-dom'
+
 import { AuthWrapper, Button } from '../../../../common/components'
 import { Input } from '../../../../common/components/input/Input.tsx'
-import { NavLink } from 'react-router-dom'
 import { PATH, TITLES } from '../../../../common/constants'
+
 import s from './Registration.module.scss'
-import { SubmitHandler, useForm } from 'react-hook-form'
-import { useEffect } from 'react'
 
 export const Registration = () => {
   const { control, handleSubmit, register } = useForm({

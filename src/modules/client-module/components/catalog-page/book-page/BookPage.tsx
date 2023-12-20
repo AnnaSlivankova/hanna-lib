@@ -1,10 +1,12 @@
-import s from './BookPage.module.scss'
 import { useEffect } from 'react'
-import { TITLES } from '../../../../../common/constants'
-import { PageWrapper } from '../../../../../common/components/page-wrapper/PageWrapper.tsx'
+
 import bookCover from '../../../../../assets/images/del/IMG_3828-rot.jpg'
-import { books } from '../../../../../common/data-for-tests.ts'
 import { Button } from '../../../../../common/components'
+import { PageWrapper } from '../../../../../common/components/page-wrapper/PageWrapper.tsx'
+import { TITLES } from '../../../../../common/constants'
+import { books } from '../../../../../common/data-for-tests.ts'
+
+import s from './BookPage.module.scss'
 
 export const BookPage = () => {
   const title = books[0].title
@@ -17,6 +19,7 @@ export const BookPage = () => {
   useEffect(() => {
     document.title = `${TITLES.SITE_NAME} | BookPage`
   }, [])
+
   return (
     <PageWrapper pageTitle={'BookPage'} svg={'catalog'}>
       <div className={s.bookContainer}>

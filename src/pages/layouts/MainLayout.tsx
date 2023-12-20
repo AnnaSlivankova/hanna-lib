@@ -1,8 +1,11 @@
-import { Footer, Header } from '../../common/components'
-import { Outlet } from 'react-router-dom'
-import s from './MainLayout.module.scss'
-import { Sidebar } from '../../common/components/sidebar/Sidebar.tsx'
 import { useEffect, useState } from 'react'
+
+import { Outlet } from 'react-router-dom'
+
+import { Footer, Header } from '../../common/components'
+import { Sidebar } from '../../common/components/sidebar/Sidebar.tsx'
+
+import s from './MainLayout.module.scss'
 
 export const MainLayout = () => {
   const [open, setOpen] = useState(false)

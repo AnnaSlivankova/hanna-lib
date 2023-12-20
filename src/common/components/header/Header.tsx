@@ -1,10 +1,13 @@
-import s from './Header.module.scss'
+import * as React from 'react'
+
+import { NavLink } from 'react-router-dom'
+
 import sprite from '../../../assets/sprite.svg'
+import { PATH, TITLES } from '../../constants'
 import { Button } from '../button/Button.tsx'
 import { LoadingLine } from '../loading-line/LoadingLine.tsx'
-import { PATH, TITLES } from '../../constants'
-import { NavLink } from 'react-router-dom'
-import * as React from 'react'
+
+import s from './Header.module.scss'
 
 export const Header: React.FC<PropsType> = ({ handleOpen }) => {
   const isLoading = false

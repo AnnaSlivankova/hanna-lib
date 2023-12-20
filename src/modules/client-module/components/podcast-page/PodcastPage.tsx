@@ -1,11 +1,13 @@
 import { useEffect } from 'react'
-import { TITLES } from '../../../../common/constants'
+
 import { PageWrapper } from '../../../../common/components/page-wrapper/PageWrapper.tsx'
+import { TITLES } from '../../../../common/constants'
 
 export const PodcastPage = () => {
   useEffect(() => {
     document.title = `${TITLES.SITE_NAME} | PodcastPage`
   }, [])
+
   return (
     // <div
     //   style={{

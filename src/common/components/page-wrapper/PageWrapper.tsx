@@ -1,7 +1,9 @@
-import s from './PageWrapper.module.scss'
 import { ReactNode } from 'react'
 import * as React from 'react'
+
 import sprite from '../../../assets/sprite.svg'
+
+import s from './PageWrapper.module.scss'
 
 export const PageWrapper: React.FC<PropsType> = ({ children, pageTitle, svg }) => {
   return (

@@ -1,5 +1,6 @@
 import * as Dialog from '@radix-ui/react-dialog'
 import { X, Menu } from 'lucide-react'
+
 import s from './SideMenu.module.scss'
 
 const DialogDemo = () => (
@@ -14,7 +15,7 @@ const DialogDemo = () => (
       <Dialog.Content className={s.DialogContent}>
         <Dialog.Title className={s.DialogTitle}>Edit profile</Dialog.Title>
         <Dialog.Description className={s.DialogDescription}>
-          Make changes to your profile here. Click save when you're done.
+          Make changes to your profile here. Click save when youre done.
         </Dialog.Description>
         <fieldset className={s.Fieldset}>
           <label className={s.Label} htmlFor="name">

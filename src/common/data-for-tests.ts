@@ -1,8 +1,8 @@
 import cover from '../assets/images/del/book.jpg'
-import cover2 from '../assets/images/del/IMG_3828.jpg'
+import cover3rot from '../assets/images/del/IMG_3535-rot.png'
 import cover3 from '../assets/images/del/IMG_3535.png'
 import cover2rot from '../assets/images/del/IMG_3828-rot.jpg'
-import cover3rot from '../assets/images/del/IMG_3535-rot.png'
+import cover2 from '../assets/images/del/IMG_3828.jpg'
 
 export const books: BooksType[] = [
   {

@@ -19,7 +19,8 @@
   border-radius: 2px;
   outline: none;
 
-  transition: var(--transtition-duration-basic) background-color,
+  transition:
+    var(--transtition-duration-basic) background-color,
     var(--transtition-duration-basic) color;
 
   &::placeholder {
@@ -132,7 +133,8 @@
   border: none; /* Remove button default border */
   outline: none;
 
-  transition: var(--transtition-duration-basic) background-color,
+  transition:
+    var(--transtition-duration-basic) background-color,
     var(--transtition-duration-basic) color;
 
   &[data-headlessui-state='active'],

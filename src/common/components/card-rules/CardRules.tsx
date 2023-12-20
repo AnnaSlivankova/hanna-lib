@@ -1,10 +1,11 @@
-import s from './CardRules.module.scss'
-import one from '../../../assets/images/hiw-search.jpg'
 import two from '../../../assets/images/hiw-login.jpg'
 // import three from '../../../assets/images/hiw-read.jpg'
 import three from '../../../assets/images/hiw-read2.jpg'
 import four from '../../../assets/images/hiw-return.jpg'
+import one from '../../../assets/images/hiw-search.jpg'
 import sprite from '../../../assets/sprite.svg'
+
+import s from './CardRules.module.scss'
 
 const pics = [
   {

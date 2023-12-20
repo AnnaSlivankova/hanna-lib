@@ -1,8 +1,8 @@
 import { ChangeEvent, ComponentProps, ComponentPropsWithoutRef, forwardRef, useState } from 'react'
 
 // import { Search, VisibilityOff } from '@/assets'
-import { EyeOff, Eye, Search } from 'lucide-react'
 import { clsx } from 'clsx'
+import { EyeOff, Eye, Search } from 'lucide-react'
 
 import s from './TextField.module.scss'
 

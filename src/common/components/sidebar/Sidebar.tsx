@@ -1,8 +1,11 @@
 import { FC } from 'react'
+
 import { NavLink } from 'react-router-dom'
-import s from './Sidebar.module.scss'
-import { PATH, TITLES } from '../../constants'
+
 import sprite from '../../../assets/sprite.svg'
+import { PATH, TITLES } from '../../constants'
+
+import s from './Sidebar.module.scss'
 
 type PropsType = {
   open: boolean
@@ -14,6 +17,7 @@ export const Sidebar: FC<PropsType> = ({ open, handleClose }) => {
   // const isLogin = true
 
   const sidebarClass = s.sidebar + (open ? ' ' + s.open : '')
+
   return (
     <>
       {open && <div className={s.background} onClick={handleClose} />}

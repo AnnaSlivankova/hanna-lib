@@ -1,16 +1,18 @@
 import { Route, Routes } from 'react-router-dom'
-import { MainLayout } from './layouts/MainLayout.tsx'
+
 import { PATH } from '../common/constants'
 import { Login, Registration } from '../modules/auth-module'
+import { RestorePassword } from '../modules/auth-module/components/restore-password/RestorePassword.tsx'
 import { MainPage } from '../modules/client-module'
 import { AboutUsPage } from '../modules/client-module/components/about-us-page/AboutUsPage.tsx'
 import { BookClubPage } from '../modules/client-module/components/book-club-page/BookClubPage.tsx'
+import { BookPage } from '../modules/client-module/components/catalog-page/book-page/BookPage.tsx'
 import { CatalogPage } from '../modules/client-module/components/catalog-page/CatalogPage.tsx'
 import { ContactsPage } from '../modules/client-module/components/contacts-page/ContactsPage.tsx'
 import { PodcastPage } from '../modules/client-module/components/podcast-page/PodcastPage.tsx'
 import { UserPage } from '../modules/client-module/components/user-page/UserPage.tsx'
-import { RestorePassword } from '../modules/auth-module/components/restore-password/RestorePassword.tsx'
-import { BookPage } from '../modules/client-module/components/catalog-page/book-page/BookPage.tsx'
+
+import { MainLayout } from './layouts/MainLayout.tsx'
 
 export const Pages = () => {
   return (

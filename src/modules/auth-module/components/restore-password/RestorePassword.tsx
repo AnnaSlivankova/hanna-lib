@@ -1,9 +1,12 @@
 import { useEffect } from 'react'
-import s from './RestorePassword.module.scss'
+
 import { SubmitHandler, useForm } from 'react-hook-form'
+
 import { AuthWrapper, Button } from '../../../../common/components'
-import { TITLES } from '../../../../common/constants'
 import { Input } from '../../../../common/components/input/Input.tsx'
+import { TITLES } from '../../../../common/constants'
+
+import s from './RestorePassword.module.scss'
 
 export const RestorePassword = () => {
   const { control, handleSubmit, register } = useForm({
@@ -17,6 +20,7 @@ export const RestorePassword = () => {
   useEffect(() => {
     document.title = `${TITLES.SITE_NAME} | ${TITLES.RESTORE_PASSWORD}`
   }, [])
+
   return (
     <>
       <AuthWrapper title={TITLES.RESTORE_PASSWORD}>

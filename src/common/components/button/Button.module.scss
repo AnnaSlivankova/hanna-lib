@@ -28,7 +28,8 @@
   border: none;
   border-radius: 0.25rem;
 
-  transition: var(--transition-duration-basic) background-color,
+  transition:
+    var(--transition-duration-basic) background-color,
     var(--transition-duration-basic) color;
 
   &:focus-visible {

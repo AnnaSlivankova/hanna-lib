@@ -1,8 +1,11 @@
-import s from './Input.module.scss'
 import * as React from 'react'
-import sprite from '../../../assets/sprite.svg'
 import { useState } from 'react'
+
 import { UseFormRegister } from 'react-hook-form'
+
+import sprite from '../../../assets/sprite.svg'
+
+import s from './Input.module.scss'
 
 export const Input: React.FC<PropsType> = ({ name, placeholder, type, register }) => {
   const [showPassword, setShowPassword] = useState(false)

@@ -1,7 +1,9 @@
-import s from './Footer.module.scss'
-import sprite from '../../../assets/sprite.svg'
 import { NavLink } from 'react-router-dom'
+
+import sprite from '../../../assets/sprite.svg'
 import { PATH } from '../../constants'
+
+import s from './Footer.module.scss'
 
 export const Footer = () => {
   return (
@@ -50,7 +52,7 @@ export const Footer = () => {
             href="https://www.telegram.com/"
             title="Перейти в telegram чат"
             target="_blank"
-            rel="nofollow"
+            rel="nofollow noreferrer"
             aria-label="Ссылка на telegram"
           >
             <svg className={s.icon}>
@@ -61,7 +63,7 @@ export const Footer = () => {
             href="https://instagram.com/"
             title="Перейти на instagram страницу"
             target="_blank"
-            rel="nofollow"
+            rel="nofollow noreferrer"
             aria-label="Ссылка на instagram"
           >
             <svg className={s.icon}>

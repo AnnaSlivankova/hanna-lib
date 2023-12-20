@@ -1,5 +1,6 @@
-import { CardRules, Carusel } from '../../../../common/components'
 import { useEffect } from 'react'
+
+import { CardRules, Carusel } from '../../../../common/components'
 import { TITLES } from '../../../../common/constants'
 
 export const MainPage = () => {

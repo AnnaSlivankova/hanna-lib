@@ -1,8 +1,10 @@
-import s from './CardBook.module.scss'
+import { useNavigate } from 'react-router-dom'
+
+import { PATH } from '../../constants'
 import { books } from '../../data-for-tests.ts'
 import { Button } from '../button/Button.tsx'
-import { useNavigate } from 'react-router-dom'
-import { PATH } from '../../constants'
+
+import s from './CardBook.module.scss'
 
 export const CardBook = () => {
   const navigate = useNavigate()
@@ -10,6 +12,7 @@ export const CardBook = () => {
   const goToBookCard = (bookId: number) => {
     navigate(`${PATH.CATALOG}/${bookId}`)
   }
+
   return (
     <div className={s.wrapper}>
       {books.map(el => {

@@ -12,7 +12,9 @@ export const useOutsideClick = (
         callback()
       }
     }
+
     document.addEventListener('click', onClickHandler)
+
     return () => {
       document.removeEventListener('click', onClickHandler)
     }

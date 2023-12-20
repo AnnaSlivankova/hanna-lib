@@ -1,11 +1,14 @@
-import s from './SelectRadix.module.scss'
-import { ChevronDownIcon } from 'lucide-react'
 import { CSSProperties, FC, Fragment, useMemo } from 'react'
-import clsx from 'clsx'
+
 import { Listbox } from '@headlessui/react'
 import { Float } from '@headlessui-float/react'
-import { Scrollbar } from '../scrollbar/Scrollbar.tsx'
+import clsx from 'clsx'
+import { ChevronDownIcon } from 'lucide-react'
+
 import { Label } from '../label/Label.tsx'
+import { Scrollbar } from '../scrollbar/Scrollbar.tsx'
+
+import s from './SelectRadix.module.scss'
 
 type Option =
   | { disabled?: boolean; label: number; value: number }
@@ -81,11 +84,14 @@ export const Select: FC<SelectProps> = ({
   const showError = !!errorMessage && errorMessage.length > 0
 
   const optionsMap: Record<number | string, number | string> = useMemo(() => {
-    return options.reduce((acc, option) => {
-      acc[option.value] = option.label
+    return options.reduce(
+      (acc, option) => {
+        acc[option.value] = option.label
 
-      return acc
-    }, {} as Record<number | string, number | string>)
+        return acc
+      },
+      {} as Record<number | string, number | string>
+    )
   }, [options])
 
   const classNames = {

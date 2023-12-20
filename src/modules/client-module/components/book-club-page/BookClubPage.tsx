@@ -1,11 +1,14 @@
 import { useEffect } from 'react'
+
 import { TITLES } from '../../../../common/constants'
+
 import s from './BookClubPage.module.scss'
 
 export const BookClubPage = () => {
   useEffect(() => {
     document.title = `${TITLES.SITE_NAME} | BookClub`
   }, [])
+
   return (
     <div
       style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}

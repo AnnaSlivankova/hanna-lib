@@ -1,9 +1,12 @@
-import one from '../../../assets/images/carusel-one.jpg'
-import two from '../../../assets/images/carusel-two.jpg'
-import three from '../../../assets/images/carusel-three.jpg'
-import s from './Carusel.module.scss'
-import sprite from '../../../assets/sprite.svg'
 import { Carousel } from 'react-responsive-carousel'
+
+import one from '../../../assets/images/carusel-one.jpg'
+import three from '../../../assets/images/carusel-three.jpg'
+import two from '../../../assets/images/carusel-two.jpg'
+import sprite from '../../../assets/sprite.svg'
+
+import s from './Carusel.module.scss'
+
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 const TextOne = () => {
