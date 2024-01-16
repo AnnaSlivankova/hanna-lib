@@ -1,0 +1,25 @@
+:root {
+  /* outlines */
+  --color-outline-focus: var(--color-info-500);
+  --outline-focus: 2px solid var(--color-outline-focus);
+
+  /* transitions */
+  --transition-duration-basic: 200ms;
+
+  /* border-radius */
+  --border-radius-s: 0.25rem;
+
+  /* header */
+  --header-height: 60px;
+
+  /* viewport */
+  --max-viewport-width: 80rem; // 1280px
+
+  /* chip colors */
+  --color-text-chip-brown: var(--color-warning-700);
+  --color-bg-chip-brown: var(--color-warning-100);
+  --color-text-chip-green: var(--color-success-700);
+  --color-bg-chip-green: var(--color-success-100);
+  --color-text-chip-blue: var(--color-info-700);
+  --color-bg-chip-blue: var(--color-info-100);
+}

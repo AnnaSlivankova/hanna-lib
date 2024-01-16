@@ -36,6 +36,13 @@ p {
   padding: 0;
 }
 
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -57,6 +64,7 @@ body {
   font-family: var(--font-family-primary), sans-serif;
   line-height: var(--line-height-m);
   color: var(--color-light-100);
+  //color: var(--color-secondary);
 
-  background-color: var(--color-dark-900);
+  background-color: var(--color-light-300);
 }

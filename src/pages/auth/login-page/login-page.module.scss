@@ -1,0 +1,14 @@
+.root {
+  flex-flow: row wrap;
+  gap: 20px;
+
+  //align-items: center;
+
+  justify-content: center;
+  min-height: calc(100vh - var(--header-height) - 221px);
+}
+
+.pic {
+  width: 100%;
+  max-width: 450px;
+}

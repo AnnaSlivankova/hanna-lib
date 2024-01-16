@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 import { UseFormRegister } from 'react-hook-form'
 
-import sprite from '../../../assets/sprite.svg'
+import sprite from '../../../assets/_sprite.svg'
 
 import s from './Input.module.scss'
 

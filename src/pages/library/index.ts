@@ -1,0 +1,8 @@
+export * from './main-page/main-page'
+export * from './catalog-page/catalog-page'
+export * from './book-club-page/book-club-page'
+export * from './podcast-page/podcast-page'
+export * from './about-us-page/about-us-page'
+export * from './contacts-page/contacts-page'
+export * from './book-page/book-page'
+// export * from ''

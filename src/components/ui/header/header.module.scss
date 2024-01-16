@@ -1,0 +1,48 @@
+.header {
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  height: var(--header-height);
+  padding: 12px 24px;
+
+  background-color: var(--color-primary);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: var(--max-viewport-width);
+}
+
+.btnsBox {
+  display: flex;
+  gap: 1rem;
+
+  a {
+    svg {
+      &:hover {
+        color: var(--color-tertriary);
+      }
+    }
+  }
+
+  @media screen and (width <= 767px) {
+    display: none;
+  }
+}
+
+.burgerBtn {
+  @media screen and (width > 767px) {
+    display: none;
+  }
+}

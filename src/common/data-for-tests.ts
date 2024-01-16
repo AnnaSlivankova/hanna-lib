@@ -15,6 +15,8 @@ export const books: BooksType[] = [
     isAvailable: 'available',
     category: 'христианская жизнь',
     period: '1 month',
+    isNew: true,
+    rating: 3,
   },
   {
     id: 1,
@@ -34,6 +36,7 @@ export const books: BooksType[] = [
     isAvailable: 'available',
     category: 'апологетика',
     period: '1 month',
+    rating: 5,
   },
   {
     id: 2,
@@ -57,6 +60,8 @@ export const books: BooksType[] = [
     isAvailable: 'available',
     category: 'биографии',
     period: '2 month',
+    isNew: true,
+    rating: 4,
   },
   {
     id: 3,
@@ -78,6 +83,7 @@ export const books: BooksType[] = [
     isAvailable: 'available',
     category: 'богословие',
     period: '1 month',
+    rating: 2,
   },
   {
     id: 4,
@@ -501,6 +507,8 @@ type BooksType = {
   category: CategoryType
   isAvailable: IsAvailableType
   period: PeriodType
+  isNew?: boolean
+  rating?: number
 }
 type IsAvailableType = 'available' | 'not available' | 'reserved'
 type PeriodType = '1 month' | '1 week' | '2 month'

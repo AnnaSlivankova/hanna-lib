@@ -1,0 +1,52 @@
+.root {
+  color: var(--color-light-100);
+}
+
+.horizontal {
+  display: flex;
+
+  @media screen and (width <= 767px) {
+    display: none;
+  }
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    @media screen and (width <= 767px) {
+      font-size: var(--font-size-s);
+    }
+  }
+}
+
+nav {
+  ul {
+    li {
+      a {
+        padding: 10px;
+        font-size: var(--font-size-m);
+        text-transform: uppercase;
+
+        &:hover {
+          color: var(--color-tertriary);
+          text-decoration: underline;
+        }
+
+        &:active {
+          color: var(--color-light-100);
+        }
+
+        &.active {
+          color: var(--color-tertriary);
+        }
+
+        //@media screen and (width <= 1027px) {
+        //  padding: 6px;
+        //  font-size: 12px;
+        //}
+      }
+    }
+  }
+}

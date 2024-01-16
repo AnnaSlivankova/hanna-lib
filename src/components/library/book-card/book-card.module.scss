@@ -1,0 +1,44 @@
+.common {
+  width: 100%;
+  max-width: 250px;
+  padding: 0 1rem 1rem;
+}
+
+.chip {
+  position: absolute;
+  z-index: 9999;
+}
+
+.cover {
+  //overflow: hidden;
+
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+
+  //border: none;
+  //background-size: cover;
+
+  //border-radius: 10px 10px 0 0;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+}
+
+.ratingBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > button {
+    margin-top: 10px;
+  }
+}

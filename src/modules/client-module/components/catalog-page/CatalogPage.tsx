@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import sprite from '../../../../assets/sprite.svg'
+import sprite from '../../../../assets/_sprite.svg'
 import { CardBook } from '../../../../common/components/card-book/CardBook.tsx'
 import { PageWrapper } from '../../../../common/components/page-wrapper/PageWrapper.tsx'
 import { Select } from '../../../../common/components/select-radix/SelectRadix.tsx'

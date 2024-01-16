@@ -1,10 +1,22 @@
 :root {
+  // colors
+  --color-primary: #385a64;
+  --color-secondary: #1a2e35;
+  --color-tertriary: #ff735c;
+
   // accent
-  --color-accent-100: #bea6ff;
-  --color-accent-300: #a280ff;
-  --color-accent-500: #8c61ff;
-  --color-accent-700: #704ecc;
-  --color-accent-900: #382766;
+  //--color-accent-100: #bea6ff;
+  //--color-accent-300: #a280ff;
+  //--color-accent-500: #8c61ff;
+  //--color-accent-700: #704ecc;
+  //--color-accent-900: #382766;
+
+  --color-accent-100: #dee9ed;
+  --color-accent-300: #9dbec8;
+  --color-accent-500: #5c93a3;
+  --color-accent-700: #497583;
+  --color-accent-900: #385a64;
+  --color-accent-1000: #1a2e35;
 
   // success
   --color-success-100: #80ffbf;

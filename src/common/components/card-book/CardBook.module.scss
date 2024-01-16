@@ -1,5 +1,5 @@
-@import 'src/assets/styles/variables';
-@import 'src/assets/styles/mixins';
+@import '_styles/variables';
+@import '_styles/mixins';
 
 @mixin commonBtn {
   font-size: 16px;
